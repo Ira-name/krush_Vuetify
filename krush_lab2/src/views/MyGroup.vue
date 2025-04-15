@@ -97,7 +97,6 @@ function save() {
         class=" mt-3"
     ></v-text-field>
 
-
     <v-data-table
         :headers="headers"
         :items="students"
