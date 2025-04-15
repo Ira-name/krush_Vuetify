@@ -4,15 +4,11 @@
       <v-list-item title="My Application" subtitle="Vuetify"></v-list-item>
       <v-divider></v-divider>
 
-      <v-list-item  prepend-icon="mdi-format-list-checks" title="List" to="/about"></v-list-item>
-      <v-list-item  prepend-icon="mdi-account-box" title="Contacts" to="/contacts"></v-list-item>
+      <v-list-item prepend-icon="mdi-format-list-checks" title="List" to="/list"></v-list-item>
+      <v-list-item prepend-icon="mdi-account-box" title="About" to="/about"></v-list-item>
+      <v-list-item prepend-icon="mdi-school" title="Моя група" to="/my-group"></v-list-item>
     </v-navigation-drawer>
 
-<!--    <v-app-bar >-->
-<!--      <v-app-bar-nav-icon  @click="drawer = !drawer"></v-app-bar-nav-icon>-->
-
-<!--      <v-app-bar-title>Application</v-app-bar-title>-->
-<!--    </v-app-bar>-->
     <v-app-bar
         app
         fixed
@@ -46,7 +42,6 @@
 
     <v-main>
       <router-view />
-<!--      <slot></slot>-->
     </v-main>
   </v-app>
 </template>
@@ -56,9 +51,3 @@ import { ref } from 'vue'
 
 const drawer = ref(true)
 </script>
-
-<!--<script>-->
-<!--export default {-->
-<!--  data: () => ({ drawer: null }),-->
-<!--}-->
-<!--</script>-->

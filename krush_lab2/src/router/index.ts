@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import List from '../views/List.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/list',
       name: 'list',
-      component: List,
+      component: () => import('../views/List.vue'),
     },
     {
       path: '/about',
@@ -17,6 +17,12 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/my-group',
+      name: 'my-group',
+      component: () => import('../views/MyGroup.vue'),
+    },
+
   ],
 })
 
